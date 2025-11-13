@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Your Story - Voice of the Voiceless</title>
+  <link rel="stylesheet" href="vov.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Voice of the Voiceless</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#stories">Stories</a></li>
+      <li><a href="index.html#get-involved">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Share Your Story</h1>
+      <p>Your voice matters. Help us amplify experiences that need to be heard.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form-section professional-form">
+      <div class="form-header">
+        <h2>Tell Your Story</h2>
+        <p>Every story shared creates connection and drives change. We're here to listen.</p>
+      </div>
+
+      <form class="modern-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="storyFirstName">First Name *</label>
+            <input type="text" id="storyFirstName" name="storyFirstName" required>
+          </div>
+          <div class="form-group">
+            <label for="storyLastName">Last Name *</label>
+            <input type="text" id="storyLastName" name="storyLastName" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="storyEmail">Email Address *</label>
+          <input type="email" id="storyEmail" name="storyEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="storyLocation">Location</label>
+          <input type="text" id="storyLocation" name="storyLocation" placeholder="Where are you from?">
+        </div>
+
+        <div class="form-group">
+          <label for="storyTitle">Story Title *</label>
+          <input type="text" id="storyTitle" name="storyTitle" placeholder="Give your story a meaningful title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="storyCategory">Story Category</label>
+          <select id="storyCategory" name="storyCategory">
+            <option value="">Select a category</option>
+            <option value="personal">Personal Journey</option>
+            <option value="community">Community Experience</option>
+            <option value="advocacy">Advocacy & Activism</option>
+            <option value="overcoming">Overcoming Challenges</option>
+            <option value="hope">Stories of Hope</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="storyContent">Your Story *</label>
+          <textarea id="storyContent" name="storyContent" rows="8" placeholder="Tell us your story... What happened? How did it affect you? What did you learn? What message do you want to share with others?" required></textarea>
+          <div class="character-count">
+            <span id="charCount">0</span> characters
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="storyImpact">What impact do you hope your story will have?</label>
+          <textarea id="storyImpact" name="storyImpact" rows="3" placeholder="How do you hope your story will help others or create change?"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>How would you like us to share your story?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="sharing" value="anonymous" checked> Share anonymously</label>
+            <label><input type="checkbox" name="sharing" value="public"> Share with my name</label>
+            <label><input type="checkbox" name="sharing" value="contact"> Contact me first before sharing</label>
+          </div>
+        </div>
+
+        <div class="form-group consent-group">
+          <label class="consent-label">
+            <input type="checkbox" name="consent" required>
+            I understand that by submitting my story, I give Voice of the Voiceless permission to share it to help raise awareness and create positive change. I confirm that this is my original story and respects the privacy and dignity of others.
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Share Your Story</button>
+          <a href="index.html#get-involved" class="btn-secondary">Back to Get Involved</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="vov.js"></script>
+  <script>
+    // Character count for story
+    const storyContent = document.getElementById('storyContent');
+    const charCount = document.getElementById('charCount');
+    
+    if (storyContent && charCount) {
+      storyContent.addEventListener('input', function() {
+        charCount.textContent = this.value.length;
+      });
+    }
+  </script>
+</body>
+</html>

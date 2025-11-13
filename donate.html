@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - Voice of the Voiceless</title>
+  <link rel="stylesheet" href="vov.css">
+</head>
+<body>
+
+  <!-- Same Navbar as Other Pages -->
+  <nav>
+    <div class="logo">Voice of the Voiceless</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#stories">Stories</a></li>
+      <li><a href="index.html#get-involved">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Support Our Mission</h1>
+      <p>Your donation helps amplify unheard voices and create lasting change</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="donation-section">
+      <div class="donation-intro">
+        <h2>Make a Difference Today</h2>
+        <p>Every contribution, no matter the size, helps us continue our work in empowering communities and sharing important stories.</p>
+      </div>
+
+      <div class="donation-options">
+        <div class="donation-card">
+          <div class="donation-tier">
+            <h3>Essential Supporter</h3>
+            <div class="amount">₦5,000</div>
+            <p>Provides resources for one community story</p>
+            <ul>
+              <li>✓ Basic recording equipment</li>
+              <li>✓ Transportation for one interview</li>
+              <li>✓ Story verification process</li>
+            </ul>
+            <button class="donate-btn" data-amount="5000">Donate Now</button>
+          </div>
+        </div>
+
+        <div class="donation-card featured">
+          <div class="donation-tier">
+            <div class="popular-badge">Most Popular</div>
+            <h3>Community Champion</h3>
+            <div class="amount">₦25,000</div>
+            <p>Supports a full community outreach</p>
+            <ul>
+              <li>✓ All Essential benefits</li>
+              <li>✓ Workshop materials for 10 people</li>
+              <li>✓ Digital platform featuring</li>
+              <li>✓ Monthly impact report</li>
+            </ul>
+            <button class="donate-btn" data-amount="25000">Donate Now</button>
+          </div>
+        </div>
+
+        <div class="donation-card">
+          <div class="donation-tier">
+            <h3>Change Maker</h3>
+            <div class="amount">₦50,000</div>
+            <p>Funds a complete advocacy campaign</p>
+            <ul>
+              <li>✓ All Community benefits</li>
+              <li>✓ Full documentary production</li>
+              <li>✓ Community resource center support</li>
+              <li>✓ Recognition on our platform</li>
+            </ul>
+            <button class="donate-btn" data-amount="50000">Donate Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Amount Section -->
+      <div class="custom-donation">
+        <h3>Or Give a Custom Amount</h3>
+        <div class="custom-amount-form">
+          <div class="amount-input">
+            <span class="currency">₦</span>
+            <input type="number" id="customAmount" placeholder="Enter amount" min="1000">
+          </div>
+          <button class="donate-btn custom">Donate Custom Amount</button>
+        </div>
+      </div>
+
+      <!-- Bank Transfer Information -->
+      <div class="bank-transfer">
+        <div class="transfer-info">
+          <h3>Bank Transfer</h3>
+          <p>Prefer to transfer directly? Use our bank details below:</p>
+          
+          <div class="bank-details">
+            <div class="bank-detail-item">
+              <strong>Account Name:</strong>
+              <span>Voice of the Voiceless Foundation</span>
+            </div>
+            <div class="bank-detail-item">
+              <strong>Bank:</strong>
+              <span>Zenith Bank</span>
+            </div>
+            <div class="bank-detail-item">
+              <strong>Account Number:</strong>
+              <span class="account-number">1234567890</span>
+              <button class="copy-btn" onclick="copyAccountNumber()">Copy</button>
+            </div>
+            <div class="bank-detail-item">
+              <strong>SWIFT/BIC:</strong>
+              <span>ZEIBNGLA</span>
+            </div>
+          </div>
+          
+          <div class="transfer-note">
+            <p>📧 After making a transfer, please email your details to <strong>donations@voiceofthevoiceless.org</strong> for proper tracking and receipt.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact Statistics -->
+      <div class="impact-stats">
+        <h3>Your Impact in Numbers</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Stories Shared</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">75+</div>
+            <div class="stat-label">Communities Reached</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">25k+</div>
+            <div class="stat-label">Lives Impacted</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Advocacy Campaigns</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-actions">
+        <a href="index.html#get-involved" class="btn-primary">Back to Get Involved</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="vov.js"></script>
+  <script>
+    function copyAccountNumber() {
+      const accountNumber = '1234567890';
+      navigator.clipboard.writeText(accountNumber).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.background = '#28a745';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+        }, 2000);
+      });
+    }
+
+    // Donation button handlers
+    document.querySelectorAll('.donate-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const amount = this.getAttribute('data-amount') || document.getElementById('customAmount').value;
+        if (!amount || amount < 1000) {
+          alert('Please enter a valid amount (minimum ₦1,000)');
+          return;
+        }
+        
+        // In a real implementation, this would redirect to payment gateway
+        alert(`Thank you for your donation of ₦${amount}! You will be redirected to our secure payment portal.`);
+        
+        // Simulate payment redirect
+        // window.location.href = `payment-gateway.html?amount=${amount}`;
+      });
+    });
+  </script>
+</body>
+</html>

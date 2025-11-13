@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer - Voice of the Voiceless</title>
+  <link rel="stylesheet" href="vov.css">
+</head>
+<body>
+
+  <!-- Same Navbar as Main Page -->
+  <nav>
+    <div class="logo">Voice of the Voiceless</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#stories">Stories</a></li>
+      <li><a href="index.html#get-involved">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Join Our Mission</h1>
+      <p>Become a volunteer and help amplify unheard voices in your community</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form-section professional-form">
+      <div class="form-header">
+        <h2>Volunteer Application</h2>
+        <p>Tell us about yourself and how you'd like to contribute</p>
+      </div>
+      
+      <form class="modern-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="City, Country">
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Skills & Expertise</label>
+          <select id="skills" name="skills" multiple>
+            <option value="writing">Writing/Editing</option>
+            <option value="research">Research</option>
+            <option value="translation">Translation</option>
+            <option value="design">Graphic Design</option>
+            <option value="photography">Photography</option>
+            <option value="outreach">Community Outreach</option>
+            <option value="tech">Technology</option>
+            <option value="fundraising">Fundraising</option>
+          </select>
+          <small>Hold Ctrl/Cmd to select multiple options</small>
+        </div>
+
+        <div class="form-group">
+          <label for="availability">Availability</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="availability" value="weekdays"> Weekdays</label>
+            <label><input type="checkbox" name="availability" value="weekends"> Weekends</label>
+            <label><input type="checkbox" name="availability" value="evenings"> Evenings</label>
+            <label><input type="checkbox" name="availability" value="flexible"> Flexible</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="motivation">Why do you want to volunteer with us? *</label>
+          <textarea id="motivation" name="motivation" rows="4" placeholder="Share your motivation and what you hope to contribute..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Relevant Experience</label>
+          <textarea id="experience" name="experience" rows="3" placeholder="Any previous volunteer or relevant experience..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Submit Application</button>
+          <a href="index.html#get-involved" class="btn-secondary">Back to Get Involved</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="vov.js"></script>
+</body>
+</html>
