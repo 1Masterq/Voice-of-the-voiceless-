@@ -977,8 +977,7 @@ section h2::after {
 .story-card.expanded p {
   max-height: 1000px; /* Enough for expanded content */
 }
-
-     /* ===== CONTACT ===== */
+/* ===== CONTACT ===== */
     .contact form {
       max-width: 400px;
       margin: auto;
@@ -990,6 +989,7 @@ section h2::after {
       padding: 10px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
+      display: block;
     }
 
     .contact button {
@@ -1008,4 +1008,3 @@ section h2::after {
       text-align: center;
       padding: 15px;
     }
-}
