@@ -977,3 +977,35 @@ section h2::after {
 .story-card.expanded p {
   max-height: 1000px; /* Enough for expanded content */
 }
+
+     /* ===== CONTACT ===== */
+    .contact form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .contact button {
+      width: 100%;
+      padding: 10px;
+      background: #111;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+}
